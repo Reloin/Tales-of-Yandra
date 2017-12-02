@@ -1,3 +1,5 @@
+import time
+
 mmc = "Hanji"
 fmc = "Yandra"
 
@@ -13,21 +15,28 @@ print("Are you a male or a female, or you identify yourself as something else?")
 
 # if it's not yes or no then loop
 while gender not in validgender:
-    gender = str.lower(input("Please answer yes or no \n"))
+    gender = str.lower(input("Please answer yes or no \n>>"))
 
 
 print("Let's begin your journey. First you'll need a weapon, what weapon would you choose?")
-weapon = ""
+weapon = 4
 listed = ["", "Sword", "Bow and Arrows", "Banana"]
 
-while (weapon != 1) or (weapon != 2) or (weapon != 3):
-    weapon = input("Please select with the number \n1.Sword\n2.Bow and Arrows\n3.Banana\n")
+while weapon > 3 or weapon <= 0:
+    weapon = input("Please select with the number \n1.Sword\n2.Bow and Arrows\n3.Banana\n>>")
     weapon = int(weapon)
+
 
 print("I see you have selected " + listed[weapon])
 
 print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
-print("\n")
+print("z")
+time.sleep(.7)
+print("zzzz")
+time.sleep(.7)
+print("zzzzzzzzz")
+time.sleep(.7)
+print("zzzzzzzzzzzzzzz")
+time.sleep(.7)
 
-print("You are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
-choice = input
+print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
