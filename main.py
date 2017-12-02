@@ -16,14 +16,21 @@ def bow():
 def banana():
     print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
     select = 0
-    while select <= 0 or select < 3:
+    while select <= 0 or select > 3:
         select = input("1.Attack\n2.Run\n3.Give Banana\n>>")
+        select = int(select)
     if select == 1:
         print("You attacked the gorilla, but your banana did not damage to the gorilla.")
         for x in "Sqush! Squash...":
             print(x, end='')
             sys.stdout.flush()
             sleep(0.1)
+        sleep(2)
+        print("You are squash to death by a gorilla.")
+        for x in "GAME OVER":
+            print(x, end='')
+            sys.stdout.flush()
+            sleep(0.3)
 
 
 # introduction
@@ -52,7 +59,11 @@ while weapon > 3 or weapon <= 0:
 
 print("I see you have selected " + listed[weapon])
 
-print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
+print("You mission is to save the princess, the world relies on you. ")
+for x in "I give you my blessing.":
+    print(x, end='')
+    sys.stdout.flush()
+    sleep(.2)
 print("z")
 sleep(.7)
 print("zzzz")
