@@ -17,9 +17,9 @@ validobject = ['skull', 'meme']
 
 def delay_print(s):
     for c in s:
-        sys.stdout.write(c)
+        print(c, end='')
         sys.stdout.flush()
-        time.sleep(0.05)
+        sleep(.05)
 
 
 def returnaction(v, n):
@@ -41,8 +41,7 @@ def checkanswer(q, extend):
             validaction.append(extend)
             return a
             returnaction(c[0], c[1])
-            if(roomNo == 3):
-                exitnow = True
+
         else:
             q = str("\nPlease enter a valid verb + action\nAvailable commands: " + str(validaction).strip('[]') + ".\n>> ")
 
