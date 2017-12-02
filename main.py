@@ -62,7 +62,7 @@ def banana():
             sleep(1)
             print("\nyou are gay")
             game_over()
-    elif choice == "n" or choice == "no":
+        elif choice == "n" or choice == "no":
             print("They killed you by not helping them.")
             game_over()
 
