@@ -1,4 +1,5 @@
 import time
+import sys
 
 mmc = "Hanji"
 fmc = "Yandra"
@@ -50,5 +51,7 @@ while True:
 
     else:
         gender_question = str("\nPlease answer yes or no .\n>> ")
+
+    break
 
 print("out")
