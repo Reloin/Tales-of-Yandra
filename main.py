@@ -42,6 +42,12 @@ def banana():
     elif select == 3:
         print("You gave the gorilla your banana, the gorilla thinks you're friendly.")
         print("The gorilla gave you a pineapple. The gorilla became your companion.")
+        for x in "Wha... What?":
+            print(x, end='')
+            sys.stdout.flush()
+            sleep(uniform(.2, .5))
+        sleep(1)
+        print("The gorilla turns out to be " + fmc + "you have been looking for.")
 
 
 # introduction
