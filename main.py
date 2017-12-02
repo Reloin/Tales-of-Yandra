@@ -1,4 +1,5 @@
-import time
+from time import sleep
+import sys
 
 mmc = "Hanji"
 fmc = "Yandra"
@@ -14,6 +15,15 @@ def bow():
 
 def banana():
     print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
+    select = 0
+    while select <= 0 or select < 3:
+        select = input("1.Attack\n2.Run\n3.Give Banana\n>>")
+    if select == 1:
+        print("You attacked the gorilla, but your banana did not damage to the gorilla.")
+        for x in "Sqush! Squash...":
+            print(x, end='')
+            sys.stdout.flush()
+            sleep(0.1)
 
 
 # introduction
@@ -44,13 +54,13 @@ print("I see you have selected " + listed[weapon])
 
 print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
 print("z")
-time.sleep(.7)
+sleep(.7)
 print("zzzz")
-time.sleep(.7)
+sleep(.7)
 print("zzzzzzzzz")
-time.sleep(.7)
+sleep(.7)
 print("zzzzzzzzzzzzzzz")
-time.sleep(.7)
+sleep(.7)
 
 if(weapon == 1):
     sword()
