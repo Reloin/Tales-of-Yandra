@@ -4,6 +4,7 @@ import sys
 
 mmc = "Hanji"
 fmc = "Yandra"
+valid = ['yes', 'no', 'y', 'n']
 
 
 def game_over():
@@ -38,7 +39,32 @@ def banana():
         sleep(1)
         game_over()
     elif select == 2:
-        print("")
+        print("You run and run ", end='')
+        sleep(.7)
+        print("you bump into a girl.")
+        print("With the banana you have she leads you to her village, this village is full of young and")
+        sleep(.3)
+        print(" beautiful females. She told you that her village suffrer from giving birth the next generations.")
+        sleep(1)
+        print("As all of the females in this village are dead from an incident, The ramining ones")
+        sleep(.3)
+        print("tried to find a cure or a solution for this.")
+        choice = "x"
+        last = None
+        while choice not in valid:
+            last = input("Will you help them with your banana?")
+        if last == "y" or last == "yes":
+            for x in "CONGRATULATIONS":
+                print(x, end='')
+                sys.stdout.flush()
+                sleep(0.2)
+            print("you are gay")
+            game_over()
+        elif last == "n" or last == "no":
+            print("They killed you by not helping them.")
+            game_over()
+            
+
     elif select == 3:
         print("You gave the gorilla your banana, the gorilla thinks you're friendly.")
         print("The gorilla gave you a pineapple. The gorilla became your companion.")
@@ -60,14 +86,13 @@ def banana():
 print("Welcome hero, to the world of Imagnus. \n I am Talia, the goddes of this world")
 filler = input("What's your name? \n>>")
 print("So your name is " + mmc)
-validgender = ['yes', 'no', 'y', 'n']
 gender = None
 
 # select gender
 print("Are you a male or a female, or you identify yourself as something else?")
 
 # if it's not yes or no then loop
-while gender not in validgender:
+while gender not in valid:
     gender = str.lower(input("Please answer yes or no \n>>"))
 
 
