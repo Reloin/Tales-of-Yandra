@@ -30,6 +30,7 @@ def banana():
         select = int(select)
     if select == 1:
         print("You attacked the gorilla, but your banana did not damage to the gorilla.")
+        sleep(1)
         for x in "Sqush! Squash...":
             print(x, end='')
             sys.stdout.flush()
@@ -42,28 +43,28 @@ def banana():
         print("You run and run ", end='')
         sleep(.7)
         print("you bump into a girl.")
-        print("With the banana you have she leads you to her village, this village is full of young and")
+        print("With the banana you have she leads you to her village, this village is full of ")
         sleep(.3)
-        print(" beautiful females. She told you that her village suffrer from giving birth the next generations.")
+        print("young and beautiful females. She told you that her village suffrer from giving")
         sleep(1)
-        print("As all of the females in this village are dead from an incident, The ramining ones")
+        print("birth the next generations. As all of the females in this village are dead from")
         sleep(.3)
-        print("tried to find a cure or a solution for this.")
-        choice = "x"
-        last = None
+        print("an incident, The ramining ones tried to find a cure or a solution for this.")
+        choice = input("Will you help them with your banana?\n>>")
         while choice not in valid:
-            last = input("Will you help them with your banana?")
-        if last == "y" or last == "yes":
+            choice = input("Will you help them with your banana?\n>>")
+            pass
+        if choice == "y" or choice == "yes":
             for x in "CONGRATULATIONS":
                 print(x, end='')
                 sys.stdout.flush()
-                sleep(0.2)
-            print("you are gay")
+                sleep(0.1)
+            sleep(1)
+            print("\nyou are gay")
             game_over()
-        elif last == "n" or last == "no":
+    elif choice == "n" or choice == "no":
             print("They killed you by not helping them.")
             game_over()
-            
 
     elif select == 3:
         print("You gave the gorilla your banana, the gorilla thinks you're friendly.")
