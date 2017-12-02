@@ -1,8 +1,16 @@
 from time import sleep
+from random import uniform
 import sys
 
 mmc = "Hanji"
 fmc = "Yandra"
+
+
+def game_over():
+    for x in "GAME OVER":
+        print(x, end='')
+        sys.stdout.flush()
+        sleep(uniform(0, 0.3))
 
 
 def sword():
@@ -26,11 +34,14 @@ def banana():
             sys.stdout.flush()
             sleep(0.1)
         sleep(2)
-        print("You are squash to death by a gorilla.")
-        for x in "GAME OVER":
-            print(x, end='')
-            sys.stdout.flush()
-            sleep(0.3)
+        print("\nYou are squash to death by a gorilla.")
+        sleep(1)
+        game_over()
+    elif select == 2:
+        print("")
+    elif select == 3:
+        print("You gave the gorilla your banana, the gorilla thinks you're friendly.")
+        print("The gorilla gave you a pineapple. The gorilla became your companion.")
 
 
 # introduction
@@ -64,7 +75,7 @@ for x in "I give you my blessing.":
     print(x, end='')
     sys.stdout.flush()
     sleep(.2)
-print("z")
+print("\nz")
 sleep(.7)
 print("zzzz")
 sleep(.7)
