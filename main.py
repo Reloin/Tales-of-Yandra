@@ -48,6 +48,12 @@ def banana():
             sleep(uniform(.2, .5))
         sleep(1)
         print("The gorilla turns out to be " + fmc + "you have been looking for.")
+        for x in "GAME END":
+            print(x, end='')
+            sys.stdout.flush()
+            sleep(uniform(.1, .3))
+        sleep(.5)
+        print("HAPPY ENDING")
 
 
 # introduction
