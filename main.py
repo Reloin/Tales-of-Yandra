@@ -18,7 +18,7 @@ def banana():
 
 # introduction
 print("Welcome hero, to the world of Imagnus. \n I am Talia, the goddes of this world")
-filler = input("What's your name? \n")
+filler = input("What's your name? \n>>")
 print("So your name is " + mmc)
 validgender = ['yes', 'no', 'y', 'n']
 gender = None
