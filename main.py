@@ -1,3 +1,5 @@
+import time
+
 mmc = "Hanji"
 fmc = "Yandra"
 
@@ -31,7 +33,15 @@ while True:
                 print("\nI see you selected " + listed[weapon] + '\n')
                 weapon_question = ''
                 print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
-                print("\n\n\n\n\n")
+                print("")
+                time.sleep(.7)
+                print("z")
+                time.sleep(.7)
+                print("zzzz")
+                time.sleep(.7)
+                print("zzzzzzzzzzzzzzzzzz")
+                time.sleep(.7)
+                break
 
             else:
                 weapon_question = str("\nPlease select a valid weapon with the number \n1.Sword\n2.Bow and Arrows\n3.Banana \n>> ")
@@ -40,3 +50,5 @@ while True:
 
     else:
         gender_question = str("\nPlease answer yes or no .\n>> ")
+
+print("out")
