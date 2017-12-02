@@ -1,10 +1,29 @@
 from time import sleep
+import time
+import os
 from random import uniform
 import sys
 
 mmc = "Hanji"
 fmc = "Yandra"
 valid = ['yes', 'no', 'y', 'n']
+validlocation = ['east', 'west', 'north', 'south']
+roomNo = 1
+location = ""
+exitnow = False
+validaction = ['pickup']
+validobject = ['skull', 'meme']
+
+
+def delay_print(s):
+    for c in s:
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(0.05)
+
+
+def returnaction(v, n):
+    print("\nYou choosed to", v, n)
 
 
 def game_over():
@@ -14,8 +33,63 @@ def game_over():
         sleep(uniform(0, 0.3))
 
 
+def checkanswer(q, extend):
+    while True:
+        a = str.lower(input(q))
+        c = a.split()
+        if c[0] in validaction and c[1] in validobject:
+            validaction.append(extend)
+            return a
+            returnaction(c[0], c[1])
+            if(roomNo == 3):
+                exitnow = True
+        else:
+            q = str("\nPlease enter a valid verb + action\nAvailable commands: " + str(validaction).strip('[]') + ".\n>> ")
+
+
 def sword():
-    print("The Game Crashes")
+    delay_print("\nYou have just picked up a glittering sword which looks as shiny as the iPhone X.")
+    print('\n')
+    delay_print("Before you could think further, you fell into a trap just beneath your feet which you didn't notice before this.")
+    time.sleep(.7)
+    os.system('cls')
+    print("\nIt's dark around you")
+    print("\nYou will have to find a way to get out of here")
+
+    while True:
+        location = str.lower(input("\nWhich direction would you like to head to next? (East, West, North, South). You're in room " + str(roomNo) + "\n>> "))
+        if location in validlocation:
+            headto(location, roomNo)
+        else:
+            print("\nPlease select between east, west, north and south.\n>> ")
+
+
+def headto(s, roomNo):
+    print('\nYou\'re now heading to the', s)
+    if(roomNo == 1):
+        if(location == 'east'):
+            location == ''
+            roomNo += 1
+            checkanswer("\nYou see a black skull on the ground, what would you like to do next? \n>> ", 'tear')
+            print("This game crashed :)")
+
+        else:
+            print("\nThere is nothing in the", s, '\n')
+    if(roomNo == 2):
+        if(location == 'west'):
+            location == ''
+            roomNo += 1
+            checkanswer("\nIn the dark room, there is a circular opening on the ceiling, what would you like to do next? \n>> ", 'use')
+        else:
+            print("\nThere is nothing in the", s, '\n')
+    if(roomNo == 3):
+        if(location == 'north'):
+            location == ''
+            roomNo += 1
+            checkanswer("You have successfully exited the room, you're now at the princess's room, what would you like to do next?", 'save')
+            validaction.extend('slap')
+        else:
+            print("\nThere is nothing in the", s, '\n')
 
 
 def bow():
