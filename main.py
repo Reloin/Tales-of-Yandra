@@ -19,8 +19,10 @@ def sword():
 
 
 def bow():
-    print("This is a bow")
-
+    print("You came to a garden, You were starving.")
+    choice = input("You saw a golden deer, will you shoot it down?(yes/no)\n>>")
+    while choice not in valid:
+        choice = input("You saw a golden deer, will you shoot it down?(yes/no)\n>>")
 
 def banana():
     print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
@@ -50,9 +52,9 @@ def banana():
         print("birth the next generations. As all of the females in this village are dead from")
         sleep(.3)
         print("an incident, The ramining ones tried to find a cure or a solution for this.")
-        choice = input("Will you help them with your banana?\n>>")
+        choice = input("Will you help them with your banana?(yes/no)\n>>")
         while choice not in valid:
-            choice = input("Will you help them with your banana?\n>>")
+            choice = input("Will you help them with your banana?(yes/no)\n>>")
             pass
         if choice == "y" or choice == "yes":
             for x in "CONGRATULATIONS":
