@@ -15,7 +15,7 @@ def game_over():
 
 
 def sword():
-    print("This is to sword")
+    print("The Game Crashes")
 
 
 def bow():
@@ -60,26 +60,25 @@ def banana():
         print("You run and run ", end='')
         sleep(.7)
         print("you bump into a girl.")
-        print("With the banana you have she leads you to her village, this village is full of ")
+        print("With the banana you have she leads you to her village, this village is full of young and")
         sleep(.3)
-        print("young and beautiful females. She told you that her village suffrer from giving")
+        print(" beautiful females. She told you that her village suffrer from giving birth the next generations.")
         sleep(1)
-        print("birth the next generations. As all of the females in this village are dead from")
+        print("As all of the females in this village are dead from an incident, The ramining ones")
         sleep(.3)
-        print("an incident, The ramining ones tried to find a cure or a solution for this.")
-        choice = input("Will you help them with your banana?(yes/no)\n>>")
+        print("tried to find a cure or a solution for this.")
+        choice = "x"
+        last = None
         while choice not in valid:
-            choice = input("Will you help them with your banana?(yes/no)\n>>")
-            pass
-        if choice == "y" or choice == "yes":
+            last = input("Will you help them with your banana?\n>>")
+        if last == "y" or last == "yes":
             for x in "CONGRATULATIONS":
                 print(x, end='')
                 sys.stdout.flush()
-                sleep(0.1)
-            sleep(1)
-            print("\nyou are gay")
+                sleep(0.2)
+            print("you are gay")
             game_over()
-        elif choice == "n" or choice == "no":
+        elif last == "n" or last == "no":
             print("They killed you by not helping them.")
             game_over()
 
@@ -91,13 +90,13 @@ def banana():
             sys.stdout.flush()
             sleep(uniform(.2, .5))
         sleep(1)
-        print("\nThe gorilla turns out to be " + fmc + "you have been looking for.")
+        print("The gorilla turns out to be " + fmc + "you have been looking for.")
         for x in "GAME END":
             print(x, end='')
             sys.stdout.flush()
             sleep(uniform(.1, .3))
         sleep(.5)
-        print("\nHAPPY ENDING")
+        print("HAPPY ENDING")
 
 
 # introduction
@@ -129,7 +128,7 @@ print("You mission is to save the princess, the world relies on you. ")
 for x in "I give you my blessing.":
     print(x, end='')
     sys.stdout.flush()
-    sleep(.1)
+    sleep(.2)
 print("\nz")
 sleep(.7)
 print("zzzz")
