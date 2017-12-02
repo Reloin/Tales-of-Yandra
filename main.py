@@ -1,29 +1,35 @@
-mmc = "Hanji"
-fmc = "Yandra"
+print("Welcome hero, to the world of Imagnus. \nI am Talia, the goddes of this world", '\n')
 
-# introduction
-print("Welcome hero, to the world of Imagnus. \n I am Talia, the goddes of this world")
-filler = input("What's your name? \n")
-print("So your name is " + mmc)
+filler = input("What's your name? \n>> ")
+
+print("\nSo your name is", filler, '\n')
+
 validgender = ['yes', 'no', 'y', 'n']
+validweapon = [1, 2, 3]
+
 gender = None
+weapon = None
 
-# select gender
-print("Are you a male or a female, or you identify yourself as something else?")
-
-# if it's not yes or no then loop
-while gender not in validgender:
-    gender = str.lower(input("Please answer yes or no \n"))
-
-
-print("Let's begin your journey. First you'll need a weapon, what weapon would you choose?")
-weapon = ""
+#variables for questions to avoid displaying multiple of them
+gender_question = str("Are you a male or a female, or you identify yourself as something else? \n>> ")
+weapon_question = str("Please select with the number \n1.Sword\n2.Bow and Arrows\n3.Banana \n>> ")
 listed = ["", "Sword", "Bow and Arrows", "Banana"]
-while (weapon != 1) or (weapon != 2) or (weapon != 3):
-    weapon = input("Please select with the number \n1.Sword\n2.Bow and Arrows\n3.Banana\n")
-    weapon = int(weapon)
 
-print("I see you selected " + listed[weapon])
+while True:
+    gender = str.lower(input(gender_question))
+    if gender in validgender:
+        print("\nLet's begin your journey. First you'll need a weapon, what weapon would you choose?\n")
+        while True:
+            weapon = int(input(weapon_question))
+            if weapon in validweapon:
+                print("\nI see you selected " + listed[weapon] + '\n')
 
-print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
-print("\n\n\n\n\n")
+                weapon_question = ''
+            else:
+                weapon_question = str("\nPlease select a valid weapon with the number \n1.Sword\n2.Bow and Arrows\n3.Banana \n>> ")
+        
+        gender_question = ''
+
+    else:
+        gender_question = str("\nPlease answer yes or no .\n>> ")
+    
