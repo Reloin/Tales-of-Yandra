@@ -19,11 +19,15 @@ while gender not in validgender:
 print("Let's begin your journey. First you'll need a weapon, what weapon would you choose?")
 weapon = ""
 listed = ["", "Sword", "Bow and Arrows", "Banana"]
+
 while (weapon != 1) or (weapon != 2) or (weapon != 3):
     weapon = input("Please select with the number \n1.Sword\n2.Bow and Arrows\n3.Banana\n")
     weapon = int(weapon)
 
-print("I see you selected " + listed[weapon])
+print("I see you have selected " + listed[weapon])
 
 print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
-print("\n\n\n\n\n")
+print("\n")
+
+print("You are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
+choice = input
