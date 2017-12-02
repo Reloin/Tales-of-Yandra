@@ -15,7 +15,7 @@ while gender not in validgender:
 
 print("Let's begin your journey. First you'll need a weapon, what weapon would you choose?")
 weapon = None
-listed[3] = {"Sword", "Bow and Arrows", "Banana"}
+listed = ["Sword", "Bow and Arrows", "Banana"]
 while (weapon is not 1) or (weapon is not 2) or (weapon is not 3):
     print("Please select with the number \n1.Sword\n2.Bow and Arrows\n3.Banana")
     break
