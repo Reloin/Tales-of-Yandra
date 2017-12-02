@@ -22,3 +22,6 @@ while (weapon is not 1) or (weapon is not 2) or (weapon is not 3):
 
 weapon = weapon - 1
 print("I see you selected " + listed[weapon])
+
+print("You mission is to save the princess, the world relies on you. \nI give you my blessing.")
+print("\n\n\n\n\n")
