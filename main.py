@@ -128,7 +128,7 @@ print("You mission is to save the princess, the world relies on you. ")
 for x in "I give you my blessing.":
     print(x, end='')
     sys.stdout.flush()
-    sleep(.2)
+    sleep(.1)
 print("\nz")
 sleep(.7)
 print("zzzz")
