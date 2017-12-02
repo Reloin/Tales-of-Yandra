@@ -74,13 +74,13 @@ def banana():
             sys.stdout.flush()
             sleep(uniform(.2, .5))
         sleep(1)
-        print("The gorilla turns out to be " + fmc + "you have been looking for.")
+        print("\nThe gorilla turns out to be " + fmc + "you have been looking for.")
         for x in "GAME END":
             print(x, end='')
             sys.stdout.flush()
             sleep(uniform(.1, .3))
         sleep(.5)
-        print("HAPPY ENDING")
+        print("\nHAPPY ENDING")
 
 
 # introduction
@@ -112,7 +112,7 @@ print("You mission is to save the princess, the world relies on you. ")
 for x in "I give you my blessing.":
     print(x, end='')
     sys.stdout.flush()
-    sleep(.2)
+    sleep(.1)
 print("\nz")
 sleep(.7)
 print("zzzz")
