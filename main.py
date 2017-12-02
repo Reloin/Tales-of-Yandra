@@ -3,6 +3,19 @@ import time
 mmc = "Hanji"
 fmc = "Yandra"
 
+
+def sword():
+    print("This is to sword")
+
+
+def bow():
+    print("This is a bow")
+
+
+def banana():
+    print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
+
+
 # introduction
 print("Welcome hero, to the world of Imagnus. \n I am Talia, the goddes of this world")
 filler = input("What's your name? \n")
@@ -39,4 +52,11 @@ time.sleep(.7)
 print("zzzzzzzzzzzzzzz")
 time.sleep(.7)
 
-print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
+if(weapon == 1):
+    sword()
+
+if(weapon == 2):
+    bow()
+
+if(weapon == 3):
+    banana()
