@@ -19,10 +19,25 @@ def sword():
 
 
 def bow():
-    print("You came to a garden, You were starving.")
-    choice = input("You saw a golden deer, will you shoot it down?(yes/no)\n>>")
+    print("You came to a garden and you wandered around.")
+    choice = input("You saw a black witch, will you shoot it down?(yes/no)\n>>")
     while choice not in valid:
-        choice = input("You saw a golden deer, will you shoot it down?(yes/no)\n>>")
+        choice = input("You saw a black witch, will you shoot it down?(yes/no)\n>>")
+    if choice == "yes" or choice == "y":
+        print("You shot it down, the black colour faded and reveals a female's body.")
+        sleep(1)
+        print("It was " + fmc)
+        sleep(.4)
+        print("You killed who you were supposed to protect")
+        sleep(.3)
+        game_over()
+    elif choice == "n" or choice == "no":
+        print("The witch leaves a spell on you, you were stoned.")
+        sleep(1)
+        print("You are going to stand here holding a bow and arrow")
+        print("for the rest of your life.")
+        game_over()
+
 
 def banana():
     print("\nYou are in the woods, a humongus gorilla is in front of you.\nWhat will you do?")
